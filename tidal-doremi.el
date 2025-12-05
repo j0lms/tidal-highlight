@@ -371,8 +371,7 @@ The value must be a list of keyboard events: characters or symbols."
                 2)))
              (format-spec (format "%%.%df" precision))
              (current-bounds-start (plist-get number-info :start))
-             (current-bounds-end (plist-get number-info :end))
-             (tidal-highlight-style 'event-only))
+             (current-bounds-end (plist-get number-info :end)))
         (doremi
          (lambda (new-val)
            (delete-region current-bounds-start current-bounds-end)
