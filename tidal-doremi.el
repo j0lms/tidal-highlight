@@ -379,10 +379,11 @@ The value must be a list of keyboard events: characters or symbols."
            (goto-char current-bounds-start)
            (insert (format format-spec new-val))
            (setq current-bounds-end (point))
-           (save-excursion
-             (goto-char current-bounds-start)
-             (mark-paragraph)
-             (tidal-run-multiple-lines))
+	   (let ((tidal-highlight-style 'event-only))
+             (save-excursion
+               (goto-char current-bounds-start)
+               (mark-paragraph)
+               (tidal-run-multiple-lines)))
            new-val)
          initial-value step)))))
 
