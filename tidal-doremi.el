@@ -14,7 +14,9 @@
 (unless (fboundp 'ring-member) ; Emacs 23
   (require 'ring+))
 (require 'mwheel nil t)
+(require 'tidal)
 (require 'tidal-macros)
+
 
 ;; Quiet the byte-compiler.
 (defvar mouse-wheel-down-event)

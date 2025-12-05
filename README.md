@@ -10,6 +10,7 @@ Event highlighting and macros for TidalCycles in Emacs.
 (use-package tidal)
 
 (use-package tidal-highlight
+  :after tidal
   :ensure (tidal-highlight
 		   :host github
 		   :repo "j0lms/tidal-highlight" 
